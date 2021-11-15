@@ -13,10 +13,13 @@ function App() {
   const alt = "🡫";
 
   let [counter, setCounter] = useState(0);
-const [direc,setDirec]=useState(0);
+  const [direc, setDirec] = useState(0);
 
   return (
+    
+
     <div className="App">
+      <h4 style={{color:"red"}}>ERCİYES OTONOM ARAÇ</h4>
       <div>
         <button
           type="button"
@@ -26,30 +29,46 @@ const [direc,setDirec]=useState(0);
           {ust}
         </button>
       </div>
-     
+
       <div>
-        <button type="button" class="btn btn-primary"  onClick={() => setDirec(direc - 2)}>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => setDirec(direc - 2)}
+        >
           {sol2}
         </button>
-        <button type="button" class="btn btn-primary" onClick={() => setDirec(direc - 1)}>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => setDirec(direc - 1)}
+        >
           {sol}
         </button>
         <button type="button" class="btn btn-danger">
           ▧
         </button>
-        {direc}
-        {counter}
+
+       {counter}
+
         <button type="button" class="btn btn-danger">
           ⊚
         </button>
-        <button type="button" class="btn btn-primary"  onClick={() => setDirec(direc + 1)}>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => setDirec(direc + 1)}
+        >
           {sag}
         </button>
-        <button type="button" class="btn btn-primary"  onClick={() => setDirec(direc + 2)}>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => setDirec(direc + 2)}
+        >
           {sag2}
         </button>
       </div>
-
 
       <div>
         <button

@@ -5,5 +5,13 @@
   align-items:center;
   height: 100vh;
   flex-direction: column;
+ 
 }
 
+.App h4{
+  display:inline-block;
+  border-style:solid; 
+  border-width: medium;
+  border-radius: 5px;
+  padding: 7px;
+}

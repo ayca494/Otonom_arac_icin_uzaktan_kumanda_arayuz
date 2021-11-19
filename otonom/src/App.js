@@ -19,7 +19,7 @@ function App() {
     
 
     <div className="App">
-      <h4 style={{color:"red"}}>ERCİYES OTONOM ARAÇ</h4>
+      {/* <h4 style={{color:"red"}}>ERCİYES OTONOM ARAÇ</h4> */}
       <div>
         <button
           type="button"
@@ -49,7 +49,7 @@ function App() {
           ▧
         </button>
 
-       {counter}
+       <h4>{counter}</h4>
 
         <button type="button" class="btn btn-danger">
           ⊚

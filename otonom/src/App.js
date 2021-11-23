@@ -1,6 +1,4 @@
 import React from "react";
-// import db from "./firebase"
-// import firebase from "firebase"
 import "./App.css";
 import { useState } from "react";
 
@@ -12,19 +10,59 @@ function App() {
   const ust = "🡩";
   const alt = "🡫";
 
-  let [counter, setCounter] = useState(0);
-  const [direc, setDirec] = useState(0);
+  const [counter, setCounter] = useState(0);
+
+  const artırmafonksiyonu = () => {
+    if ((counter) => 0 && counter < 100) {
+      setCounter(counter + 1);
+    }
+    if (counter === 100) {
+      setCounter(counter);
+    }
+  };
+  const azaltmafonksiyonu = () => {
+    if (counter > 0 && counter <= 100) {
+      setCounter(counter - 1);
+    }
+  };
+
+  const [direction, setDirection] = useState(0);
+
+  const right = () => {
+    if (direction => 0 && direction <= 20) {
+      setCounter(direction + 1);
+    }
+    if(direction===20){
+      setCounter(direction)
+    }
+  };
+
+  const right2 = () => {
+    if (direction => 0 && direction <= 20) {
+      setCounter(direction + 2);
+    }
+  };
+
+  const left = () => {
+    if (direction > 0 && direction <= 20) {
+      setCounter(direction - 1);
+    }
+  };
+
+  const left2 = () => {
+    if (direction > 0 && direction <= 20) {
+      setCounter(direction - 2);
+    }
+  };
 
   return (
-    
-
     <div className="App">
       {/* <h4 style={{color:"red"}}>ERCİYES OTONOM ARAÇ</h4> */}
       <div>
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setCounter(counter + 1)}
+          onClick={artırmafonksiyonu}
         >
           {ust}
         </button>
@@ -34,14 +72,14 @@ function App() {
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setDirec(direc - 2)}
+          onClick={left2}
         >
           {sol2}
         </button>
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setDirec(direc - 1)}
+          onClick={left}
         >
           {sol}
         </button>
@@ -49,7 +87,7 @@ function App() {
           ▧
         </button>
 
-       <h4>{counter}</h4>
+        <h4>{counter}</h4>
 
         <button type="button" class="btn btn-danger">
           ⊚
@@ -57,14 +95,14 @@ function App() {
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setDirec(direc + 1)}
+          onClick={right}
         >
           {sag}
         </button>
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setDirec(direc + 2)}
+          onClick={right2}
         >
           {sag2}
         </button>
@@ -74,7 +112,7 @@ function App() {
         <button
           type="button"
           class="btn btn-primary"
-          onClick={() => setCounter(counter - 1)}
+          onClick={azaltmafonksiyonu}
         >
           {alt}
         </button>
